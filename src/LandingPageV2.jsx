@@ -4,12 +4,15 @@ import PricingSection from './components/landing/PricingSection';
 import VideoTestimonialsSection from './components/landing/VideoTestimonialsSection';
 import IntegrationsSection from './components/landing/IntegrationsSection';
 import FaqSection from './components/landing/FaqSection';
+import Header from './components/landing/Header';
 
 export default function LandingPageV2() {
   const [activeTab, setActiveTab] = useState('recovery');
 
   return (
     <div className="min-h-screen bg-white">
+      <Header />
+      <div className="pt-16">
       {/* Hero */}
       <section className="text-white py-20 px-6" style={{background: 'linear-gradient(135deg, #2472b3 0%, #26abe2 100%)'}}>
         <div className="max-w-6xl mx-auto">
@@ -383,6 +386,7 @@ export default function LandingPageV2() {
       >
         <p>© 2024 Único Drop. Todos os direitos reservados.</p>
       </footer>
+      </div>
     </div>
   );
 }
