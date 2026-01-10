@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { ArrowRight, TrendingUp, DollarSign, Clock, Zap, BarChart3, CheckCircle2, Target, Star, Play, PhoneCall } from 'lucide-react';
 import PricingSection from './components/landing/PricingSection';
+import IntegrationsSection from './components/landing/IntegrationsSection';
 
 export default function LandingPageV2() {
   const [activeTab, setActiveTab] = useState('recovery');
@@ -347,6 +348,7 @@ export default function LandingPageV2() {
       </section>
 
       <PricingSection />
+      <IntegrationsSection />
 
       {/* CTA Final */}
       <section className="py-16 px-6 bg-gray-900 text-white text-center">
