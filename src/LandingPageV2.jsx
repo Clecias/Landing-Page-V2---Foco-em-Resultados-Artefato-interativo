@@ -328,11 +328,14 @@ export default function LandingPageV2() {
                 "Notificações inteligentes por WhatsApp",
                 "Campanhas automatizadas por Email",
                 "Mensagens SMS em momentos-chave",
-                "Dashboard com lucro real em tempo real",
-                "Rastreamento automático de pedidos"
-                "Análise de margem por produto",
-                "ROI de campanhas de marketing",
-                "Implementação guiada pela equipe"
+              [
+  "Dashboard com lucro real em tempo real",
+  "Rastreamento automático de pedidos",
+  "Análise de margem por produto",
+  "ROI de campanhas de marketing",
+  "Implementação guiada pela equipe",
+]
+              ]
               .map((item, idx) => (
                 <div key={idx} className="flex items-start gap-3">
                   <CheckCircle2 className="w-6 h-6 flex-shrink-0 mt-1" style={{color: '#2472b3'}} />
