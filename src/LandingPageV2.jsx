@@ -16,7 +16,7 @@ export default function LandingPageV2() {
             </div>
             
             <h1 className="text-4xl md:text-6xl font-bold mb-6 leading-tight">
-              Aumente Seu Faturamento em 30-45% Sem Vender Mais
+              Aumente Seu Faturamento em 30-45%
             </h1>
             
             <p className="text-2xl mb-4 font-semibold">
@@ -68,7 +68,7 @@ export default function LandingPageV2() {
               Resultados Reais Que Você Pode Esperar
             </h2>
             <p className="text-xl text-gray-600">
-              Baseado em dados de +500 lojas usando o Único Drop
+              Baseado em dados de +28mil lojas
             </p>
           </div>
 
@@ -329,8 +329,7 @@ export default function LandingPageV2() {
                 "Campanhas automatizadas por Email",
                 "Mensagens SMS em momentos-chave",
                 "Dashboard com lucro real em tempo real",
-                "Rastreamento automático de pedidos",
-                "Atendimento automatizado 24/7",
+                "Rastreamento automático de pedidos"
                 "Análise de margem por produto",
                 "ROI de campanhas de marketing",
                 "Implementação guiada pela equipe"
@@ -349,38 +348,12 @@ export default function LandingPageV2() {
       <section className="py-16 px-6 text-white" style={{background: 'linear-gradient(135deg, #1b1464 0%, #2472b3 100%)'}}>
         <div className="max-w-4xl mx-auto">
           <h2 className="text-3xl md:text-4xl font-bold text-center mb-4">
-            Invista Menos do Que Gasta em Café
-          </h2>
-          <p className="text-xl text-center mb-12 opacity-90">
             Sistema completo que se paga no primeiro mês
-          </p>
-
+          </h2>
+      
           <div className="bg-white bg-opacity-10 backdrop-blur-lg border border-white border-opacity-20 p-10 rounded-2xl mb-8">
             <div className="text-center mb-8">
-              <p className="text-xl mb-4 opacity-90">Se contratasse tudo separado:</p>
-              <p className="text-5xl font-black line-through opacity-60 mb-4">R$ 1.700/mês</p>
-              <p className="text-2xl mb-6">Com o Único Drop você paga:</p>
-              <div className="inline-block bg-white bg-opacity-20 backdrop-blur px-12 py-8 rounded-2xl border-2 border-white border-opacity-40">
-                <p className="text-7xl font-black mb-2">R$ 119</p>
-                <p className="text-2xl opacity-90">por mês</p>
-              </div>
-              <p className="text-lg mt-6 opacity-90">
-                + Implementação Guiada + Suporte Especializado Inclusos
-              </p>
-            </div>
-
-              <div className="flex items-start gap-4">
-                <div>
-                  <p className="font-bold text-xl mb-2">🛡️ Garantia de Resultado ou Dinheiro de Volta</p>
-                  <p className="text-lg">Use por 30 dias. Se não recuperar pelo menos R$ 119 em vendas, devolvemos 100% sem perguntas. Todo o risco é nosso.</p>
-                </div>
-              </div>
-            </div>
-
-            <p className="text-sm opacity-75">
-                ✓ Sem contrato de fidelidade • ✓ Cancele quando quiser • ✓ Ativação imediata
-              </p>
-            </div>
+      
           </div>
 
           <div className="grid md:grid-cols-3 gap-6 text-center">
