@@ -369,7 +369,6 @@ export default function LandingPageV2() {
               </p>
             </div>
 
-            <div className="bg-green-600 p-6 rounded-xl mb-8">
               <div className="flex items-start gap-4">
                 <Shield className="w-10 h-10 flex-shrink-0" />
                 <div>
