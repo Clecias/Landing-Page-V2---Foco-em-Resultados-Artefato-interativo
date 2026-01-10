@@ -1,5 +1,5 @@
 const integrations = [
-  { name: 'Shopify', logo: '/integrations/shopify.svg' },
+  { name: 'Shopify', logo: '/public/shopify.svg' },
   { name: 'UnicoPag', logo: '/integrations/unicopag3.svg' },
   { name: 'Yampi', logo: '/integrations/yampi.svg' },
   { name: 'Cartpanda', logo: '/integrations/cartpanda.svg' },
