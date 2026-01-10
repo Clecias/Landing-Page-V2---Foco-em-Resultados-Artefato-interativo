@@ -321,27 +321,24 @@ export default function LandingPageV2() {
           <div className="bg-white p-10 rounded-2xl border-2" style={{borderColor: '#2472b3'}}>
             <h3 className="text-2xl font-bold text-gray-900 mb-8 text-center">O Que Você Recebe</h3>
             <div className="grid md:grid-cols-2 gap-6">
-              {[
-                "Recuperação automática de carrinhos abandonados",
-                "Recuperação de pedidos recusados com métodos alternativos",
-                "Reativação de clientes inativos",
-                "Notificações inteligentes por WhatsApp",
-                "Campanhas automatizadas por Email",
-                "Mensagens SMS em momentos-chave",
-              [
+             {[
+  "Recuperação automática de carrinhos abandonados",
+  "Recuperação de pedidos recusados com métodos alternativos",
+  "Reativação de clientes inativos",
+  "Notificações inteligentes por WhatsApp",
+  "Campanhas automatizadas por Email",
+  "Mensagens SMS em momentos-chave",
   "Dashboard com lucro real em tempo real",
   "Rastreamento automático de pedidos",
   "Análise de margem por produto",
   "ROI de campanhas de marketing",
   "Implementação guiada pela equipe",
-]
-              ]
-              .map((item, idx) => (
-                <div key={idx} className="flex items-start gap-3">
-                  <CheckCircle2 className="w-6 h-6 flex-shrink-0 mt-1" style={{color: '#2472b3'}} />
-                  <span className="text-gray-700 text-lg">{item}</span>
-                </div>
-              ))}
+].map((item, idx) => (
+  <div key={idx} className="flex items-start gap-3">
+    <CheckCircle2 className="w-6 h-6 flex-shrink-0 mt-1" style={{ color: "#2472b3" }} />
+    <span className="text-gray-700 text-lg">{item}</span>
+  </div>
+))}
             </div>
           </div>
         </div>
