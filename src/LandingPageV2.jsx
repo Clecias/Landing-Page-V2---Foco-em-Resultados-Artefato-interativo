@@ -428,7 +428,7 @@ export default function LandingPageV2() {
           <p className="text-xl mb-8 opacity-90">
             Enquanto você decide, eles estão recuperando vendas no automático. Comece hoje e veja resultados em 24h.
           </p>
-          <button className="bg-white px-8 py-4 sm:px-10 sm:py-5 md:px-12 md:py-6 rounded-xl font-bold text-lg sm:text-xl md:text-2xl hover:shadow-2xl transition mb-6" style={{color: '#2472b3'}}>
+          <button className="bg-white px-6 py-4 sm:px-10 sm:py-5 md:px-12 md:py-6 rounded-xl font-bold text-lg sm:text-xl md:text-2xl hover:shadow-2xl transition mb-6" style={{color: '#2472b3'}}>
             Começar Minha Automação Agora
             <ArrowRight className="w-7 h-7 inline ml-2" />
           </button>
