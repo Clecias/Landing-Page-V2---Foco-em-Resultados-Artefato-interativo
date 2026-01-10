@@ -3,6 +3,7 @@ import { ArrowRight, TrendingUp, DollarSign, Clock, Zap, BarChart3, CheckCircle2
 import PricingSection from './components/landing/PricingSection';
 import VideoTestimonialsSection from './components/landing/VideoTestimonialsSection';
 import IntegrationsSection from './components/landing/IntegrationsSection';
+import FaqSection from './components/landing/FaqSection';
 
 export default function LandingPageV2() {
   const [activeTab, setActiveTab] = useState('recovery');
@@ -351,6 +352,7 @@ export default function LandingPageV2() {
       <PricingSection />
       <VideoTestimonialsSection />
       <IntegrationsSection />
+      <FaqSection />
 
       {/* CTA Final */}
       <section className="py-16 px-6 bg-gray-900 text-white text-center">
@@ -374,6 +376,13 @@ export default function LandingPageV2() {
           </div>
         </div>
       </section>
+
+      <footer
+        className="py-8 px-4 text-center text-slate-400"
+        style={{ background: 'linear-gradient(135deg, #1b1464 0%, #2472b3 100%)' }}
+      >
+        <p>© 2024 Único Drop. Todos os direitos reservados.</p>
+      </footer>
     </div>
   );
 }
