@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { ArrowRight, TrendingUp, DollarSign, Clock, Zap, BarChart3, CheckCircle2, Target, Star, Play, PhoneCall } from 'lucide-react';
 import PricingSection from './components/landing/PricingSection';
+import VideoTestimonialsSection from './components/landing/VideoTestimonialsSection';
 import IntegrationsSection from './components/landing/IntegrationsSection';
 
 export default function LandingPageV2() {
@@ -348,6 +349,7 @@ export default function LandingPageV2() {
       </section>
 
       <PricingSection />
+      <VideoTestimonialsSection />
       <IntegrationsSection />
 
       {/* CTA Final */}
