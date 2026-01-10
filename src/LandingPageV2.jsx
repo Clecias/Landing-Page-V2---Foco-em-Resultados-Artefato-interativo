@@ -370,7 +370,6 @@ export default function LandingPageV2() {
             </div>
 
               <div className="flex items-start gap-4">
-                <Shield className="w-10 h-10 flex-shrink-0" />
                 <div>
                   <p className="font-bold text-xl mb-2">🛡️ Garantia de Resultado ou Dinheiro de Volta</p>
                   <p className="text-lg">Use por 30 dias. Se não recuperar pelo menos R$ 119 em vendas, devolvemos 100% sem perguntas. Todo o risco é nosso.</p>
