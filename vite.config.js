@@ -8,6 +8,17 @@ export default defineConfig({
       '@': '/src',
     },
   },
+  esbuild: {
+    jsx: 'automatic',
+  },
+  optimizeDeps: {
+    esbuildOptions: {
+      loader: {
+        '.js': 'jsx',
+        '.jsx': 'jsx',
+      },
+    },
+  },
   base: process.env.VERCEL
     ? '/'
     : '/Landing-Page-V2---Foco-em-Resultados-Artefato-interativo/',
