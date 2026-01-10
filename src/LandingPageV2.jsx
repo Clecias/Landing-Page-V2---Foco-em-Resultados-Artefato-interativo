@@ -1,74 +1,11 @@
-import React, { useEffect, useRef, useState } from 'react';
-import { ArrowRight, TrendingUp, DollarSign, Clock, Zap, BarChart3, CheckCircle2, Target, Star, Play, PhoneCall } from 'lucide-react';
-import PricingSection from './components/landing/PricingSection';
-import VideoTestimonialsSection from './components/landing/VideoTestimonialsSection';
-import IntegrationsSection from './components/landing/IntegrationsSection';
-import FaqSection from './components/landing/FaqSection';
-import Header from './components/landing/Header';
+import React, { useState } from 'react';
+import { ArrowRight, TrendingUp, DollarSign, Clock, Zap, Users, BarChart3, CheckCircle2, Target, Shield, Star, Play, PhoneCall } from 'lucide-react';
 
 export default function LandingPageV2() {
   const [activeTab, setActiveTab] = useState('recovery');
-  const [isDemoOpen, setIsDemoOpen] = useState(false);
-  const demoTriggerRef = useRef(null);
-  const demoCloseRef = useRef(null);
-  const demoModalRef = useRef(null);
-
-  useEffect(() => {
-    if (!isDemoOpen) {
-      document.body.style.overflow = '';
-      return;
-    }
-
-    document.body.style.overflow = 'hidden';
-    demoCloseRef.current?.focus();
-
-    const handleKeyDown = (event) => {
-      if (event.key === 'Escape') {
-        event.preventDefault();
-        setIsDemoOpen(false);
-        return;
-      }
-
-      if (event.key !== 'Tab') return;
-
-      const focusableElements = demoModalRef.current?.querySelectorAll(
-        'button,[href],input,select,textarea,[tabindex]:not([tabindex="-1"])'
-      );
-
-      if (!focusableElements || focusableElements.length === 0) return;
-
-      const first = focusableElements[0];
-      const last = focusableElements[focusableElements.length - 1];
-
-      if (event.shiftKey && document.activeElement === first) {
-        event.preventDefault();
-        last.focus();
-      } else if (!event.shiftKey && document.activeElement === last) {
-        event.preventDefault();
-        first.focus();
-      }
-    };
-
-    document.addEventListener('keydown', handleKeyDown);
-
-    return () => {
-      document.removeEventListener('keydown', handleKeyDown);
-      document.body.style.overflow = '';
-    };
-  }, [isDemoOpen]);
-
-  useEffect(() => {
-    if (!isDemoOpen) {
-      demoTriggerRef.current?.focus();
-    }
-  }, [isDemoOpen]);
-
-  const handleOpenDemo = () => setIsDemoOpen(true);
-  const handleCloseDemo = () => setIsDemoOpen(false);
 
   return (
-    <div className="min-h-screen bg-white pt-16">
-      <Header />
+    <div className="min-h-screen bg-white">
       {/* Hero */}
       <section className="text-white py-20 px-6" style={{background: 'linear-gradient(135deg, #2472b3 0%, #26abe2 100%)'}}>
         <div className="max-w-6xl mx-auto">
@@ -79,7 +16,7 @@ export default function LandingPageV2() {
             </div>
             
             <h1 className="text-4xl md:text-6xl font-bold mb-6 leading-tight">
-              Aumente Seu Faturamento em 30-45% Sem Vender Mais
+              Aumente Seu Faturamento em 30-45%
             </h1>
             
             <p className="text-2xl mb-4 font-semibold">
@@ -91,17 +28,11 @@ export default function LandingPageV2() {
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
-              <button className="bg-white px-6 py-4 sm:px-8 sm:py-4 md:px-10 md:py-5 rounded-lg font-bold text-base sm:text-lg md:text-xl hover:shadow-2xl transition" style={{color: '#2472b3'}}>
+              <button className="bg-white px-10 py-5 rounded-lg font-bold text-xl hover:shadow-2xl transition" style={{color: '#2472b3'}}>
                 Começar a Recuperar Vendas Agora
                 <ArrowRight className="w-6 h-6 inline ml-2" />
               </button>
-              <button
-                ref={demoTriggerRef}
-                type="button"
-                data-demo-button
-                className="bg-transparent border-2 border-white text-white px-6 py-4 sm:px-8 sm:py-4 md:px-10 md:py-5 rounded-lg font-bold text-base sm:text-lg md:text-xl hover:bg-white hover:bg-opacity-10 transition"
-                onClick={handleOpenDemo}
-              >
+              <button className="bg-transparent border-2 border-white text-white px-10 py-5 rounded-lg font-bold text-xl hover:bg-white hover:bg-opacity-10 transition">
                 <Play className="w-6 h-6 inline mr-2" />
                 Ver Demonstração
               </button>
@@ -110,15 +41,15 @@ export default function LandingPageV2() {
             <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
               <div className="bg-white bg-opacity-20 backdrop-blur p-6 rounded-xl">
                 <p className="text-4xl font-black mb-2">R$ 2.3M+</p>
-                <p className="text-sm opacity-90">Recuperados em 2025</p>
+                <p className="text-sm opacity-90">Recuperados em 2024</p>
               </div>
               <div className="bg-white bg-opacity-20 backdrop-blur p-6 rounded-xl">
                 <p className="text-4xl font-black mb-2">38%</p>
                 <p className="text-sm opacity-90">Aumento médio</p>
               </div>
               <div className="bg-white bg-opacity-20 backdrop-blur p-6 rounded-xl">
-                <p className="text-4xl font-black mb-2">28mil</p>
-                <p className="text-sm opacity-90">Lojas</p>
+                <p className="text-4xl font-black mb-2">500+</p>
+                <p className="text-sm opacity-90">Lojas ativas</p>
               </div>
               <div className="bg-white bg-opacity-20 backdrop-blur p-6 rounded-xl">
                 <p className="text-4xl font-black mb-2">24/7</p>
@@ -137,7 +68,7 @@ export default function LandingPageV2() {
               Resultados Reais Que Você Pode Esperar
             </h2>
             <p className="text-xl text-gray-600">
-              Baseado em dados de +500 lojas usando o Único Drop
+              Baseado em dados de +28mil lojas
             </p>
           </div>
 
@@ -335,7 +266,7 @@ export default function LandingPageV2() {
           </div>
 
           <div className="mt-12 text-center">
-            <button className="bg-white px-6 py-4 sm:px-8 sm:py-4 md:px-10 md:py-5 rounded-lg font-bold text-base sm:text-lg md:text-xl hover:shadow-2xl transition" style={{color: '#2472b3'}}>
+            <button className="bg-white px-10 py-5 rounded-lg font-bold text-xl hover:shadow-2xl transition" style={{color: '#2472b3'}}>
               Quero Resultados Como Esses
               <ArrowRight className="w-6 h-6 inline ml-2" />
             </button>
@@ -398,12 +329,11 @@ export default function LandingPageV2() {
                 "Campanhas automatizadas por Email",
                 "Mensagens SMS em momentos-chave",
                 "Dashboard com lucro real em tempo real",
-                "Rastreamento automático de pedidos",
-                "Atendimento automatizado 24/7",
+                "Rastreamento automático de pedidos"
                 "Análise de margem por produto",
                 "ROI de campanhas de marketing",
                 "Implementação guiada pela equipe"
-              ].map((item, idx) => (
+              .map((item, idx) => (
                 <div key={idx} className="flex items-start gap-3">
                   <CheckCircle2 className="w-6 h-6 flex-shrink-0 mt-1" style={{color: '#2472b3'}} />
                   <span className="text-gray-700 text-lg">{item}</span>
@@ -414,10 +344,43 @@ export default function LandingPageV2() {
         </div>
       </section>
 
-      <PricingSection />
-      <VideoTestimonialsSection />
-      <IntegrationsSection />
-      <FaqSection />
+      {/* Oferta */}
+      <section className="py-16 px-6 text-white" style={{background: 'linear-gradient(135deg, #1b1464 0%, #2472b3 100%)'}}>
+        <div className="max-w-4xl mx-auto">
+          <h2 className="text-3xl md:text-4xl font-bold text-center mb-4">
+            Sistema completo que se paga no primeiro mês
+          </h2>
+      
+          <div className="bg-white bg-opacity-10 backdrop-blur-lg border border-white border-opacity-20 p-10 rounded-2xl mb-8">
+            <div className="text-center mb-8">
+      
+          </div>
+
+          <div className="grid md:grid-cols-3 gap-6 text-center">
+            <div className="bg-white bg-opacity-10 backdrop-blur p-6 rounded-xl">
+              <div className="flex items-center justify-center gap-2 mb-2">
+                <Star className="w-6 h-6 fill-yellow-400 text-yellow-400" />
+                <p className="text-2xl font-bold">4.9/5</p>
+              </div>
+              <p className="opacity-90">Avaliação média</p>
+            </div>
+            <div className="bg-white bg-opacity-10 backdrop-blur p-6 rounded-xl">
+              <div className="flex items-center justify-center gap-2 mb-2">
+                <Users className="w-6 h-6" />
+                <p className="text-2xl font-bold">2800+</p>
+              </div>
+              <p className="opacity-90">Lojas</p>
+            </div>
+            <div className="bg-white bg-opacity-10 backdrop-blur p-6 rounded-xl">
+              <div className="flex items-center justify-center gap-2 mb-2">
+                <TrendingUp className="w-6 h-6" />
+                <p className="text-2xl font-bold">R$ 2.3M+</p>
+              </div>
+              <p className="opacity-90">Recuperados</p>
+            </div>
+          </div>
+        </div>
+      </section>
 
       {/* CTA Final */}
       <section className="py-16 px-6 bg-gray-900 text-white text-center">
@@ -428,64 +391,19 @@ export default function LandingPageV2() {
           <p className="text-xl mb-8 opacity-90">
             Enquanto você decide, eles estão recuperando vendas no automático. Comece hoje e veja resultados em 24h.
           </p>
-          <button className="bg-white px-6 py-4 sm:px-10 sm:py-5 md:px-12 md:py-6 rounded-xl font-bold text-lg sm:text-xl md:text-2xl hover:shadow-2xl transition mb-6" style={{color: '#2472b3'}}>
+          <button className="bg-white px-12 py-6 rounded-xl font-bold text-2xl hover:shadow-2xl transition mb-6" style={{color: '#2472b3'}}>
             Começar Minha Automação Agora
             <ArrowRight className="w-7 h-7 inline ml-2" />
           </button>
           <div className="pt-8 border-t border-gray-700">
             <p className="text-lg mb-4">Prefere falar com alguém? Estamos aqui:</p>
-            <button className="bg-green-600 text-white px-6 py-3 sm:px-8 sm:py-4 rounded-lg font-bold text-base sm:text-lg hover:bg-green-700 transition">
+            <button className="bg-green-600 text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-green-700 transition">
               <PhoneCall className="w-5 h-5 inline mr-2" />
               Falar no WhatsApp com Especialista
             </button>
           </div>
         </div>
       </section>
-
-      <footer
-        className="py-8 px-4 text-center text-slate-400"
-        style={{ background: 'linear-gradient(135deg, #1b1464 0%, #2472b3 100%)' }}
-      >
-        <p>© 2024 Único Drop. Todos os direitos reservados.</p>
-      </footer>
-
-      {isDemoOpen && (
-        <div
-          className="demo-modal__overlay"
-          onClick={(event) => {
-            if (event.target === event.currentTarget) {
-              handleCloseDemo();
-            }
-          }}
-        >
-          <div
-            className="demo-modal__content"
-            role="dialog"
-            aria-modal="true"
-            aria-label="Demonstração em vídeo"
-            ref={demoModalRef}
-          >
-            <button
-              type="button"
-              className="demo-modal__close"
-              aria-label="Fechar demonstração"
-              onClick={handleCloseDemo}
-              ref={demoCloseRef}
-            >
-              ×
-            </button>
-            <div className="demo-modal__video">
-              <iframe
-                title="Demonstração"
-                src="https://www.youtube.com/embed/M8O4vOj-UOE?autoplay=1&mute=1&rel=0"
-                allow="autoplay; encrypted-media; picture-in-picture"
-                allowFullScreen
-                loading="lazy"
-              />
-            </div>
-          </div>
-        </div>
-      )}
     </div>
   );
 }

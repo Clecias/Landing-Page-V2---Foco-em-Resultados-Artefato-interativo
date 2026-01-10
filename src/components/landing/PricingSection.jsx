@@ -103,7 +103,7 @@ export default function PricingSection() {
               </ul>
 
               <button
-                className={`w-full rounded-xl font-bold text-base sm:text-lg py-3 sm:py-4 transition ${
+                className={`w-full rounded-xl font-bold text-lg py-4 transition ${
                   plan.popular
                     ? 'bg-white text-[#2472b3] hover:shadow-2xl'
                     : 'border-2 border-white/40 text-white hover:bg-white/10'
