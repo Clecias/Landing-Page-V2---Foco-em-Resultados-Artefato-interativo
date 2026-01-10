@@ -333,7 +333,7 @@ export default function LandingPageV2() {
                 "Análise de margem por produto",
                 "ROI de campanhas de marketing",
                 "Implementação guiada pela equipe"
-              ].map((item, idx) => (
+              .map((item, idx) => (
                 <div key={idx} className="flex items-start gap-3">
                   <CheckCircle2 className="w-6 h-6 flex-shrink-0 mt-1" style={{color: '#2472b3'}} />
                   <span className="text-gray-700 text-lg">{item}</span>
