@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import { ArrowRight, TrendingUp, DollarSign, Clock, Zap, BarChart3, CheckCircle2, Target, Star, Play, PhoneCall } from 'lucide-react';
 import PricingSection from './components/landing/PricingSection';
 import VideoTestimonialsSection from './components/landing/VideoTestimonialsSection';
@@ -8,6 +8,63 @@ import Header from './components/landing/Header';
 
 export default function LandingPageV2() {
   const [activeTab, setActiveTab] = useState('recovery');
+  const [isDemoOpen, setIsDemoOpen] = useState(false);
+  const demoTriggerRef = useRef(null);
+  const demoCloseRef = useRef(null);
+  const demoModalRef = useRef(null);
+
+  useEffect(() => {
+    if (!isDemoOpen) {
+      document.body.style.overflow = '';
+      return;
+    }
+
+    document.body.style.overflow = 'hidden';
+    demoCloseRef.current?.focus();
+
+    const handleKeyDown = (event) => {
+      if (event.key === 'Escape') {
+        event.preventDefault();
+        setIsDemoOpen(false);
+        return;
+      }
+
+      if (event.key !== 'Tab') return;
+
+      const focusableElements = demoModalRef.current?.querySelectorAll(
+        'button,[href],input,select,textarea,[tabindex]:not([tabindex="-1"])'
+      );
+
+      if (!focusableElements || focusableElements.length === 0) return;
+
+      const first = focusableElements[0];
+      const last = focusableElements[focusableElements.length - 1];
+
+      if (event.shiftKey && document.activeElement === first) {
+        event.preventDefault();
+        last.focus();
+      } else if (!event.shiftKey && document.activeElement === last) {
+        event.preventDefault();
+        first.focus();
+      }
+    };
+
+    document.addEventListener('keydown', handleKeyDown);
+
+    return () => {
+      document.removeEventListener('keydown', handleKeyDown);
+      document.body.style.overflow = '';
+    };
+  }, [isDemoOpen]);
+
+  useEffect(() => {
+    if (!isDemoOpen) {
+      demoTriggerRef.current?.focus();
+    }
+  }, [isDemoOpen]);
+
+  const handleOpenDemo = () => setIsDemoOpen(true);
+  const handleCloseDemo = () => setIsDemoOpen(false);
 
   return (
     <div className="min-h-screen bg-white pt-16">
@@ -38,7 +95,13 @@ export default function LandingPageV2() {
                 Começar a Recuperar Vendas Agora
                 <ArrowRight className="w-6 h-6 inline ml-2" />
               </button>
-              <button className="bg-transparent border-2 border-white text-white px-10 py-5 rounded-lg font-bold text-xl hover:bg-white hover:bg-opacity-10 transition">
+              <button
+                ref={demoTriggerRef}
+                type="button"
+                data-demo-button
+                className="bg-transparent border-2 border-white text-white px-10 py-5 rounded-lg font-bold text-xl hover:bg-white hover:bg-opacity-10 transition"
+                onClick={handleOpenDemo}
+              >
                 <Play className="w-6 h-6 inline mr-2" />
                 Ver Demonstração
               </button>
@@ -385,6 +448,44 @@ export default function LandingPageV2() {
       >
         <p>© 2024 Único Drop. Todos os direitos reservados.</p>
       </footer>
+
+      {isDemoOpen && (
+        <div
+          className="demo-modal__overlay"
+          onClick={(event) => {
+            if (event.target === event.currentTarget) {
+              handleCloseDemo();
+            }
+          }}
+        >
+          <div
+            className="demo-modal__content"
+            role="dialog"
+            aria-modal="true"
+            aria-label="Demonstração em vídeo"
+            ref={demoModalRef}
+          >
+            <button
+              type="button"
+              className="demo-modal__close"
+              aria-label="Fechar demonstração"
+              onClick={handleCloseDemo}
+              ref={demoCloseRef}
+            >
+              ×
+            </button>
+            <div className="demo-modal__video">
+              <iframe
+                title="Demonstração"
+                src="https://www.youtube.com/embed/M8O4vOj-UOE?autoplay=1&mute=1&rel=0"
+                allow="autoplay; encrypted-media; picture-in-picture"
+                allowFullScreen
+                loading="lazy"
+              />
+            </div>
+          </div>
+        </div>
+      )}
     </div>
   );
 }
