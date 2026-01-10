@@ -1,4 +1,4 @@
-import { ArrowRight, Check, MessageCircle, Shield } from 'lucide-react';
+import { ArrowRight, Check, Shield } from 'lucide-react';
 
 const plans = [
   {
@@ -116,38 +116,23 @@ export default function PricingSection() {
           ))}
         </div>
 
-        <div className="bg-green-600 p-6 rounded-xl mb-8">
-          <div className="flex flex-col items-center text-center gap-4">
-            <Shield className="w-10 h-10 flex-shrink-0 text-white" />
-            <div>
-              <p className="font-bold text-xl mb-2 text-white">
-                Garantia Incondicional de 30 Dias
-              </p>
-              <p className="text-lg text-white">
-                Use o sistema por 30 dias completos. Se ele não recuperar mais
-                dinheiro do que o valor da mensalidade, você recebe 100% do seu
-                investimento de volta. Sem perguntas, sem burocracia. O risco é
-                TODO meu.
-              </p>
-            </div>
-          </div>
+        <div className="text-center mb-8">
+          <Shield className="w-10 h-10 mx-auto mb-4 text-white" />
+          <p className="font-bold text-xl mb-2 text-white">
+            Garantia Incondicional de 30 Dias
+          </p>
+          <p className="text-lg text-white/90">
+            Use o sistema por 30 dias completos. Se ele não recuperar mais
+            dinheiro do que o valor da mensalidade, você recebe 100% do seu
+            investimento de volta. Sem perguntas, sem burocracia. O risco é
+            TODO meu.
+          </p>
         </div>
 
         <div className="text-center">
-          <p className="text-sm text-white/75 mb-8">
+          <p className="text-sm text-white/75">
             ✓ Ativação imediata • ✓ Cancele quando quiser • ✓ Suporte em português
           </p>
-
-          <div className="pt-8 border-t border-white/20">
-            <p className="text-lg mb-4 text-white">Ainda com dúvidas?</p>
-            <button
-              className="bg-green-600 text-white px-8 py-4 rounded-xl font-bold text-lg hover:bg-green-700 transition"
-              onClick={() => window.open('https://wa.me/5511999999999', '_blank')}
-            >
-              <MessageCircle className="w-5 h-5 inline mr-2" />
-              Falar com Especialista no WhatsApp
-            </button>
-          </div>
         </div>
       </div>
     </section>
