@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
-import { ArrowRight, TrendingUp, DollarSign, Clock, Zap, Users, BarChart3, CheckCircle2, Target, Shield, Star, Play, PhoneCall } from 'lucide-react';
+import { ArrowRight, TrendingUp, DollarSign, Clock, Zap, BarChart3, CheckCircle2, Target, Star, Play, PhoneCall } from 'lucide-react';
+import PricingSection from './components/landing/PricingSection';
 
 export default function LandingPageV2() {
   const [activeTab, setActiveTab] = useState('recovery');
@@ -345,76 +346,7 @@ export default function LandingPageV2() {
         </div>
       </section>
 
-      {/* Oferta */}
-      <section className="py-16 px-6 text-white" style={{background: 'linear-gradient(135deg, #1b1464 0%, #2472b3 100%)'}}>
-        <div className="max-w-4xl mx-auto">
-          <h2 className="text-3xl md:text-4xl font-bold text-center mb-4">
-            Invista Menos do Que Gasta em Café
-          </h2>
-          <p className="text-xl text-center mb-12 opacity-90">
-            Sistema completo que se paga no primeiro mês
-          </p>
-
-          <div className="bg-white bg-opacity-10 backdrop-blur-lg border border-white border-opacity-20 p-10 rounded-2xl mb-8">
-            <div className="text-center mb-8">
-              <p className="text-xl mb-4 opacity-90">Se contratasse tudo separado:</p>
-              <p className="text-5xl font-black line-through opacity-60 mb-4">R$ 1.700/mês</p>
-              <p className="text-2xl mb-6">Com o Único Drop você paga:</p>
-              <div className="inline-block bg-white bg-opacity-20 backdrop-blur px-12 py-8 rounded-2xl border-2 border-white border-opacity-40">
-                <p className="text-7xl font-black mb-2">R$ 119</p>
-                <p className="text-2xl opacity-90">por mês</p>
-              </div>
-              <p className="text-lg mt-6 opacity-90">
-                + Implementação Guiada + Suporte Especializado Inclusos
-              </p>
-            </div>
-
-            <div className="bg-green-600 p-6 rounded-xl mb-8">
-              <div className="flex items-start gap-4">
-                <Shield className="w-10 h-10 flex-shrink-0" />
-                <div>
-                  <p className="font-bold text-xl mb-2">🛡️ Garantia de Resultado ou Dinheiro de Volta</p>
-                  <p className="text-lg">Use por 30 dias. Se não recuperar pelo menos R$ 119 em vendas, devolvemos 100% sem perguntas. Todo o risco é nosso.</p>
-                </div>
-              </div>
-            </div>
-
-            <div className="text-center">
-              <button className="bg-white px-12 py-6 rounded-xl font-bold text-2xl hover:shadow-2xl transition w-full md:w-auto mb-4" style={{color: '#2472b3'}}>
-                SIM! Quero Começar Agora
-                <ArrowRight className="w-7 h-7 inline ml-2" />
-              </button>
-              <p className="text-sm opacity-75">
-                ✓ Sem contrato de fidelidade • ✓ Cancele quando quiser • ✓ Ativação imediata
-              </p>
-            </div>
-          </div>
-
-          <div className="grid md:grid-cols-3 gap-6 text-center">
-            <div className="bg-white bg-opacity-10 backdrop-blur p-6 rounded-xl">
-              <div className="flex items-center justify-center gap-2 mb-2">
-                <Star className="w-6 h-6 fill-yellow-400 text-yellow-400" />
-                <p className="text-2xl font-bold">4.9/5</p>
-              </div>
-              <p className="opacity-90">Avaliação média</p>
-            </div>
-            <div className="bg-white bg-opacity-10 backdrop-blur p-6 rounded-xl">
-              <div className="flex items-center justify-center gap-2 mb-2">
-                <Users className="w-6 h-6" />
-                <p className="text-2xl font-bold">500+</p>
-              </div>
-              <p className="opacity-90">Lojas ativas</p>
-            </div>
-            <div className="bg-white bg-opacity-10 backdrop-blur p-6 rounded-xl">
-              <div className="flex items-center justify-center gap-2 mb-2">
-                <TrendingUp className="w-6 h-6" />
-                <p className="text-2xl font-bold">R$ 2.3M+</p>
-              </div>
-              <p className="opacity-90">Recuperados</p>
-            </div>
-          </div>
-        </div>
-      </section>
+      <PricingSection />
 
       {/* CTA Final */}
       <section className="py-16 px-6 bg-gray-900 text-white text-center">
