@@ -379,12 +379,7 @@ export default function LandingPageV2() {
               </div>
             </div>
 
-            <div className="text-center">
-              <button className="bg-white px-12 py-6 rounded-xl font-bold text-2xl hover:shadow-2xl transition w-full md:w-auto mb-4" style={{color: '#2472b3'}}>
-                SIM! Quero Começar Agora
-                <ArrowRight className="w-7 h-7 inline ml-2" />
-              </button>
-              <p className="text-sm opacity-75">
+            <p className="text-sm opacity-75">
                 ✓ Sem contrato de fidelidade • ✓ Cancele quando quiser • ✓ Ativação imediata
               </p>
             </div>
