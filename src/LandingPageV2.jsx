@@ -401,9 +401,9 @@ export default function LandingPageV2() {
             <div className="bg-white bg-opacity-10 backdrop-blur p-6 rounded-xl">
               <div className="flex items-center justify-center gap-2 mb-2">
                 <Users className="w-6 h-6" />
-                <p className="text-2xl font-bold">500+</p>
+                <p className="text-2xl font-bold">2800+</p>
               </div>
-              <p className="opacity-90">Lojas ativas</p>
+              <p className="opacity-90">Lojas</p>
             </div>
             <div className="bg-white bg-opacity-10 backdrop-blur p-6 rounded-xl">
               <div className="flex items-center justify-center gap-2 mb-2">
