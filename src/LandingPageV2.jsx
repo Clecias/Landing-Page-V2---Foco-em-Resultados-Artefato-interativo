@@ -48,15 +48,15 @@ export default function LandingPageV2() {
             <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
               <div className="bg-white bg-opacity-20 backdrop-blur p-6 rounded-xl">
                 <p className="text-4xl font-black mb-2">R$ 2.3M+</p>
-                <p className="text-sm opacity-90">Recuperados em 2024</p>
+                <p className="text-sm opacity-90">Recuperados em 2025</p>
               </div>
               <div className="bg-white bg-opacity-20 backdrop-blur p-6 rounded-xl">
                 <p className="text-4xl font-black mb-2">38%</p>
                 <p className="text-sm opacity-90">Aumento médio</p>
               </div>
               <div className="bg-white bg-opacity-20 backdrop-blur p-6 rounded-xl">
-                <p className="text-4xl font-black mb-2">500+</p>
-                <p className="text-sm opacity-90">Lojas ativas</p>
+                <p className="text-4xl font-black mb-2">28mil</p>
+                <p className="text-sm opacity-90">Lojas</p>
               </div>
               <div className="bg-white bg-opacity-20 backdrop-blur p-6 rounded-xl">
                 <p className="text-4xl font-black mb-2">24/7</p>
