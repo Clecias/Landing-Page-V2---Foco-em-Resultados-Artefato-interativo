@@ -1,11 +1,74 @@
-import React, { useState } from 'react';
-import { ArrowRight, TrendingUp, DollarSign, Clock, Zap, Users, BarChart3, CheckCircle2, Target, Shield, Star, Play, PhoneCall } from 'lucide-react';
+import React, { useEffect, useRef, useState } from 'react';
+import { ArrowRight, TrendingUp, DollarSign, Clock, Zap, BarChart3, CheckCircle2, Target, Star, Play, PhoneCall } from 'lucide-react';
+import PricingSection from './components/landing/PricingSection';
+import VideoTestimonialsSection from './components/landing/VideoTestimonialsSection';
+import IntegrationsSection from './components/landing/IntegrationsSection';
+import FaqSection from './components/landing/FaqSection';
+import Header from './components/landing/Header';
 
 export default function LandingPageV2() {
   const [activeTab, setActiveTab] = useState('recovery');
+  const [isDemoOpen, setIsDemoOpen] = useState(false);
+  const demoTriggerRef = useRef(null);
+  const demoCloseRef = useRef(null);
+  const demoModalRef = useRef(null);
+
+  useEffect(() => {
+    if (!isDemoOpen) {
+      document.body.style.overflow = '';
+      return;
+    }
+
+    document.body.style.overflow = 'hidden';
+    demoCloseRef.current?.focus();
+
+    const handleKeyDown = (event) => {
+      if (event.key === 'Escape') {
+        event.preventDefault();
+        setIsDemoOpen(false);
+        return;
+      }
+
+      if (event.key !== 'Tab') return;
+
+      const focusableElements = demoModalRef.current?.querySelectorAll(
+        'button,[href],input,select,textarea,[tabindex]:not([tabindex="-1"])'
+      );
+
+      if (!focusableElements || focusableElements.length === 0) return;
+
+      const first = focusableElements[0];
+      const last = focusableElements[focusableElements.length - 1];
+
+      if (event.shiftKey && document.activeElement === first) {
+        event.preventDefault();
+        last.focus();
+      } else if (!event.shiftKey && document.activeElement === last) {
+        event.preventDefault();
+        first.focus();
+      }
+    };
+
+    document.addEventListener('keydown', handleKeyDown);
+
+    return () => {
+      document.removeEventListener('keydown', handleKeyDown);
+      document.body.style.overflow = '';
+    };
+  }, [isDemoOpen]);
+
+  useEffect(() => {
+    if (!isDemoOpen) {
+      demoTriggerRef.current?.focus();
+    }
+  }, [isDemoOpen]);
+
+  const handleOpenDemo = () => setIsDemoOpen(true);
+  const handleCloseDemo = () => setIsDemoOpen(false);
 
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-white pt-16">
+      <Header />
       {/* Hero */}
       <section className="text-white py-20 px-6" style={{background: 'linear-gradient(135deg, #2472b3 0%, #26abe2 100%)'}}>
         <div className="max-w-6xl mx-auto">
@@ -28,11 +91,17 @@ export default function LandingPageV2() {
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
-              <button className="bg-white px-10 py-5 rounded-lg font-bold text-xl hover:shadow-2xl transition" style={{color: '#2472b3'}}>
+              <button className="bg-white px-6 py-4 sm:px-8 sm:py-4 md:px-10 md:py-5 rounded-lg font-bold text-base sm:text-lg md:text-xl hover:shadow-2xl transition" style={{color: '#2472b3'}}>
                 Começar a Recuperar Vendas Agora
                 <ArrowRight className="w-6 h-6 inline ml-2" />
               </button>
-              <button className="bg-transparent border-2 border-white text-white px-10 py-5 rounded-lg font-bold text-xl hover:bg-white hover:bg-opacity-10 transition">
+              <button
+                ref={demoTriggerRef}
+                type="button"
+                data-demo-button
+                className="bg-transparent border-2 border-white text-white px-6 py-4 sm:px-8 sm:py-4 md:px-10 md:py-5 rounded-lg font-bold text-base sm:text-lg md:text-xl hover:bg-white hover:bg-opacity-10 transition"
+                onClick={handleOpenDemo}
+              >
                 <Play className="w-6 h-6 inline mr-2" />
                 Ver Demonstração
               </button>
@@ -41,15 +110,15 @@ export default function LandingPageV2() {
             <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
               <div className="bg-white bg-opacity-20 backdrop-blur p-6 rounded-xl">
                 <p className="text-4xl font-black mb-2">R$ 2.3M+</p>
-                <p className="text-sm opacity-90">Recuperados em 2024</p>
+                <p className="text-sm opacity-90">Recuperados em 2025</p>
               </div>
               <div className="bg-white bg-opacity-20 backdrop-blur p-6 rounded-xl">
                 <p className="text-4xl font-black mb-2">38%</p>
                 <p className="text-sm opacity-90">Aumento médio</p>
               </div>
               <div className="bg-white bg-opacity-20 backdrop-blur p-6 rounded-xl">
-                <p className="text-4xl font-black mb-2">500+</p>
-                <p className="text-sm opacity-90">Lojas ativas</p>
+                <p className="text-4xl font-black mb-2">28mil+</p>
+                <p className="text-sm opacity-90">Lojas</p>
               </div>
               <div className="bg-white bg-opacity-20 backdrop-blur p-6 rounded-xl">
                 <p className="text-4xl font-black mb-2">24/7</p>
@@ -266,7 +335,7 @@ export default function LandingPageV2() {
           </div>
 
           <div className="mt-12 text-center">
-            <button className="bg-white px-10 py-5 rounded-lg font-bold text-xl hover:shadow-2xl transition" style={{color: '#2472b3'}}>
+            <button className="bg-white px-6 py-4 sm:px-8 sm:py-4 md:px-10 md:py-5 rounded-lg font-bold text-base sm:text-lg md:text-xl hover:shadow-2xl transition" style={{color: '#2472b3'}}>
               Quero Resultados Como Esses
               <ArrowRight className="w-6 h-6 inline ml-2" />
             </button>
@@ -321,68 +390,36 @@ export default function LandingPageV2() {
           <div className="bg-white p-10 rounded-2xl border-2" style={{borderColor: '#2472b3'}}>
             <h3 className="text-2xl font-bold text-gray-900 mb-8 text-center">O Que Você Recebe</h3>
             <div className="grid md:grid-cols-2 gap-6">
-             {[
-  "Recuperação automática de carrinhos abandonados",
-  "Recuperação de pedidos recusados com métodos alternativos",
-  "Reativação de clientes inativos",
-  "Notificações inteligentes por WhatsApp",
-  "Campanhas automatizadas por Email",
-  "Mensagens SMS em momentos-chave",
-  "Dashboard com lucro real em tempo real",
-  "Rastreamento automático de pedidos",
-  "Análise de margem por produto",
-  "ROI de campanhas de marketing",
-  "Implementação guiada pela equipe",
-].map((item, idx) => (
-  <div key={idx} className="flex items-start gap-3">
-    <CheckCircle2 className="w-6 h-6 flex-shrink-0 mt-1" style={{ color: "#2472b3" }} />
-    <span className="text-gray-700 text-lg">{item}</span>
-  </div>
-))}
+              {[
+                "Recuperação automática de carrinhos abandonados",
+                "Recuperação de pedidos recusados com métodos alternativos",
+                "Reativação de clientes inativos",
+                "Notificações inteligentes por WhatsApp",
+                "Campanhas automatizadas por Email",
+                "Mensagens SMS em momentos-chave",
+                "Dashboard com lucro real em tempo real",
+                "Rastreamento automático de pedidos",
+         
+                "Análise de margem por produto",
+                "ROI de campanhas de marketing",
+                "Implementação guiada pela equipe",
+              ].map((item, idx) => (
+                <div key={idx} className="flex items-start gap-3">
+                  <CheckCircle2 className="w-6 h-6 flex-shrink-0 mt-1" style={{color: '#2472b3'}} />
+                  <span className="text-gray-700 text-lg">{item}</span>
+                </div>
+              ))}
             </div>
           </div>
         </div>
       </section>
 
-      {/* Oferta */}
-      <section className="py-16 px-6 text-white" style={{background: 'linear-gradient(135deg, #1b1464 0%, #2472b3 100%)'}}>
-        <div className="max-w-4xl mx-auto">
-          <h2 className="text-3xl md:text-4xl font-bold text-center mb-4">
-            Sistema completo que se paga no primeiro mês
-          </h2>
-      
-          <div className="bg-white bg-opacity-10 backdrop-blur-lg border border-white border-opacity-20 p-10 rounded-2xl mb-8">
-            <div className="text-center mb-8">
-      
-          </div>
+      <PricingSection />
+      <VideoTestimonialsSection />
+      <IntegrationsSection />
+      <FaqSection />
 
-          <div className="grid md:grid-cols-3 gap-6 text-center">
-            <div className="bg-white bg-opacity-10 backdrop-blur p-6 rounded-xl">
-              <div className="flex items-center justify-center gap-2 mb-2">
-                <Star className="w-6 h-6 fill-yellow-400 text-yellow-400" />
-                <p className="text-2xl font-bold">4.9/5</p>
-              </div>
-              <p className="opacity-90">Avaliação média</p>
-            </div>
-            <div className="bg-white bg-opacity-10 backdrop-blur p-6 rounded-xl">
-              <div className="flex items-center justify-center gap-2 mb-2">
-                <Users className="w-6 h-6" />
-                <p className="text-2xl font-bold">2800+</p>
-              </div>
-              <p className="opacity-90">Lojas</p>
-            </div>
-            <div className="bg-white bg-opacity-10 backdrop-blur p-6 rounded-xl">
-              <div className="flex items-center justify-center gap-2 mb-2">
-                <TrendingUp className="w-6 h-6" />
-                <p className="text-2xl font-bold">R$ 2.3M+</p>
-              </div>
-              <p className="opacity-90">Recuperados</p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-            {/* CTA Final */}
+      {/* CTA Final */}
       <section className="py-16 px-6 bg-gray-900 text-white text-center">
         <div className="max-w-3xl mx-auto">
           <h2 className="text-3xl md:text-4xl font-bold mb-6">
@@ -405,6 +442,7 @@ export default function LandingPageV2() {
         </div>
       </section>
 
+      {/* Footer */}
       <footer
         className="py-8 px-4 text-center text-slate-400"
         style={{ background: 'linear-gradient(135deg, #1b1464 0%, #2472b3 100%)' }}
