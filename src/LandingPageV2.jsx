@@ -407,3 +407,50 @@ export default function LandingPageV2() {
     </div>
   );
 }
+      <footer
+        className="py-8 px-4 text-center text-slate-400"
+        style={{ background: 'linear-gradient(135deg, #1b1464 0%, #2472b3 100%)' }}
+      >
+        <p>© 2024 Único Drop. Todos os direitos reservados.</p>
+      </footer>
+
+      {isDemoOpen && (
+        <div
+          className="demo-modal__overlay"
+          onClick={(event) => {
+            if (event.target === event.currentTarget) {
+              handleCloseDemo();
+            }
+          }}
+        >
+          <div
+            className="demo-modal__content"
+            role="dialog"
+            aria-modal="true"
+            aria-label="Demonstração em vídeo"
+            ref={demoModalRef}
+          >
+            <button
+              type="button"
+              className="demo-modal__close"
+              aria-label="Fechar demonstração"
+              onClick={handleCloseDemo}
+              ref={demoCloseRef}
+            >
+              ×
+            </button>
+            <div className="demo-modal__video">
+              <iframe
+                title="Demonstração"
+                src="https://www.youtube.com/embed/M8O4vOj-UOE?autoplay=1&mute=1&rel=0"
+                allow="autoplay; encrypted-media; picture-in-picture"
+                allowFullScreen
+                loading="lazy"
+              />
+            </div>
+          </div>
+        </div>
+      )}
+    </div>
+  );
+}
