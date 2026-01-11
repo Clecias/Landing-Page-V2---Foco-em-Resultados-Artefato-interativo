@@ -405,8 +405,6 @@ export default function LandingPageV2() {
         </div>
       </section>
     </div>
-  );
-}
       <footer
         className="py-8 px-4 text-center text-slate-400"
         style={{ background: 'linear-gradient(135deg, #1b1464 0%, #2472b3 100%)' }}
@@ -451,6 +449,3 @@ export default function LandingPageV2() {
           </div>
         </div>
       )}
-    </div>
-  );
-}
