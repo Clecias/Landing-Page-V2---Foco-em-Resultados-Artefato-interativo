@@ -382,7 +382,7 @@ export default function LandingPageV2() {
         </div>
       </section>
 
-      {/* CTA Final */}
+            {/* CTA Final */}
       <section className="py-16 px-6 bg-gray-900 text-white text-center">
         <div className="max-w-3xl mx-auto">
           <h2 className="text-3xl md:text-4xl font-bold mb-6">
@@ -391,20 +391,20 @@ export default function LandingPageV2() {
           <p className="text-xl mb-8 opacity-90">
             Enquanto você decide, eles estão recuperando vendas no automático. Comece hoje e veja resultados em 24h.
           </p>
-          <button className="bg-white px-12 py-6 rounded-xl font-bold text-2xl hover:shadow-2xl transition mb-6" style={{color: '#2472b3'}}>
+          <button className="bg-white px-6 py-4 sm:px-10 sm:py-5 md:px-12 md:py-6 rounded-xl font-bold text-lg sm:text-xl md:text-2xl hover:shadow-2xl transition mb-6" style={{color: '#2472b3'}}>
             Começar Minha Automação Agora
             <ArrowRight className="w-7 h-7 inline ml-2" />
           </button>
           <div className="pt-8 border-t border-gray-700">
             <p className="text-lg mb-4">Prefere falar com alguém? Estamos aqui:</p>
-            <button className="bg-green-600 text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-green-700 transition">
+            <button className="bg-green-600 text-white px-6 py-3 sm:px-8 sm:py-4 rounded-lg font-bold text-base sm:text-lg hover:bg-green-700 transition">
               <PhoneCall className="w-5 h-5 inline mr-2" />
               Falar no WhatsApp com Especialista
             </button>
           </div>
         </div>
       </section>
-    </div>
+
       <footer
         className="py-8 px-4 text-center text-slate-400"
         style={{ background: 'linear-gradient(135deg, #1b1464 0%, #2472b3 100%)' }}
@@ -449,3 +449,6 @@ export default function LandingPageV2() {
           </div>
         </div>
       )}
+    </div>
+  );
+}
