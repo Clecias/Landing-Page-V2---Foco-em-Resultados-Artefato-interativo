@@ -67,10 +67,10 @@ export default function LandingPageV2() {
   const handleCloseDemo = () => setIsDemoOpen(false);
 
   return (
-    <div className="min-h-screen bg-white pt-16 overflow-x-hidden">
+    <div className="min-h-screen bg-white pt-16">
       <Header />
       {/* Hero */}
-      <section className="text-white py-16 sm:py-20 px-5 sm:px-6" style={{background: 'linear-gradient(135deg, #2472b3 0%, #26abe2 100%)'}}>
+      <section className="text-white py-20 px-6" style={{background: 'linear-gradient(135deg, #2472b3 0%, #26abe2 100%)'}}>
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-12">
             <div className="inline-flex items-center gap-2 bg-white bg-opacity-20 px-5 py-2 rounded-lg font-semibold mb-6">
@@ -406,8 +406,7 @@ export default function LandingPageV2() {
                 "Campanhas automatizadas por Email",
                 "Mensagens SMS em momentos-chave",
                 "Dashboard com lucro real em tempo real",
-                "Rastreamento automático de pedidos",
-                "Atendimento automatizado 24/7",
+                "Rastreamento automático de pedidos",         
                 "Análise de margem por produto",
                 "ROI de campanhas de marketing",
                 "Implementação guiada pela equipe",
