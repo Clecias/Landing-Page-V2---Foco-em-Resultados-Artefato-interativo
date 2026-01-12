@@ -70,7 +70,7 @@ export default function LandingPageV2() {
     <div className="min-h-screen bg-white pt-16 overflow-x-hidden">
       <Header />
       {/* Hero */}
-      <section className="text-white py-20 px-6" style={{background: 'linear-gradient(135deg, #2472b3 0%, #26abe2 100%)'}}>
+      <section className="text-white py-16 sm:py-20 px-5 sm:px-6" style={{background: 'linear-gradient(135deg, #2472b3 0%, #26abe2 100%)'}}>
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-12">
             <div className="inline-flex items-center gap-2 bg-white bg-opacity-20 px-5 py-2 rounded-lg font-semibold mb-6">
@@ -78,7 +78,7 @@ export default function LandingPageV2() {
               +3.847 vendas recuperadas nas últimas 24h
             </div>
             
-            <h1 className="text-[clamp(2.25rem,5vw,3.75rem)] font-bold mb-6 leading-tight">
+            <h1 className="text-[clamp(2.1rem,5.4vw,3.75rem)] font-bold mb-6 leading-tight">
               Aumente Seu Faturamento em 30-45%
             </h1>
             
@@ -86,11 +86,11 @@ export default function LandingPageV2() {
               Recupere automaticamente vendas que você já conquistou mas não fechou
             </p>
             
-            <p className="text-[clamp(1.05rem,2.5vw,1.25rem)] opacity-95 mb-12 max-w-3xl mx-auto">
+            <p className="text-[clamp(1.02rem,2.6vw,1.25rem)] opacity-95 mb-10 sm:mb-12 max-w-3xl mx-auto">
               Carrinhos abandonados, pedidos recusados e clientes inativos viram dinheiro no bolso enquanto você dorme
             </p>
 
-            <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
+            <div className="flex flex-col sm:flex-row gap-4 justify-center mb-10 sm:mb-12">
               <a
                 className="bg-white w-full sm:w-auto px-6 py-4 sm:px-8 sm:py-4 md:px-10 md:py-5 rounded-lg font-bold text-base sm:text-lg md:text-xl hover:shadow-2xl transition inline-flex items-center justify-center"
                 style={{color: '#2472b3'}}
@@ -111,22 +111,22 @@ export default function LandingPageV2() {
               </button>
             </div>
 
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
-              <div className="bg-white bg-opacity-20 backdrop-blur p-6 rounded-xl">
-                <p className="text-4xl font-black mb-2">R$ 2.3M+</p>
-                <p className="text-sm opacity-90">Recuperados em 2024</p>
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6">
+              <div className="bg-white bg-opacity-20 backdrop-blur p-4 sm:p-6 rounded-xl">
+                <p className="text-[clamp(1.45rem,4.2vw,2.25rem)] font-black mb-2">R$ 2.3M+</p>
+                <p className="text-xs sm:text-sm opacity-90">Recuperados em 2024</p>
               </div>
-              <div className="bg-white bg-opacity-20 backdrop-blur p-6 rounded-xl">
-                <p className="text-4xl font-black mb-2">38%</p>
-                <p className="text-sm opacity-90">Aumento médio</p>
+              <div className="bg-white bg-opacity-20 backdrop-blur p-4 sm:p-6 rounded-xl">
+                <p className="text-[clamp(1.45rem,4.2vw,2.25rem)] font-black mb-2">38%</p>
+                <p className="text-xs sm:text-sm opacity-90">Aumento médio</p>
               </div>
-              <div className="bg-white bg-opacity-20 backdrop-blur p-6 rounded-xl">
-                <p className="text-4xl font-black mb-2">500+</p>
-                <p className="text-sm opacity-90">Lojas ativas</p>
+              <div className="bg-white bg-opacity-20 backdrop-blur p-4 sm:p-6 rounded-xl">
+                <p className="text-[clamp(1.45rem,4.2vw,2.25rem)] font-black mb-2">500+</p>
+                <p className="text-xs sm:text-sm opacity-90">Lojas ativas</p>
               </div>
-              <div className="bg-white bg-opacity-20 backdrop-blur p-6 rounded-xl">
-                <p className="text-4xl font-black mb-2">24/7</p>
-                <p className="text-sm opacity-90">Trabalhando</p>
+              <div className="bg-white bg-opacity-20 backdrop-blur p-4 sm:p-6 rounded-xl">
+                <p className="text-[clamp(1.45rem,4.2vw,2.25rem)] font-black mb-2">24/7</p>
+                <p className="text-xs sm:text-sm opacity-90">Trabalhando</p>
               </div>
             </div>
           </div>
@@ -134,18 +134,18 @@ export default function LandingPageV2() {
       </section>
 
       {/* Resultados Esperados */}
-      <section className="py-16 px-6 bg-white">
+      <section className="py-14 sm:py-16 px-5 sm:px-6 bg-white">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+            <h2 className="text-[clamp(1.75rem,4vw,2.25rem)] font-bold text-gray-900 mb-4">
               Resultados Reais Que Você Pode Esperar
             </h2>
-            <p className="text-xl text-gray-600">
+            <p className="text-[clamp(1.05rem,2.6vw,1.25rem)] text-gray-600">
               Baseado em dados de +28mil lojas
             </p>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-8 mb-12">
+          <div className="grid md:grid-cols-3 gap-6 sm:gap-8 mb-12">
             {[
               {
                 icon: <DollarSign className="w-16 h-16 text-white" />,
@@ -169,24 +169,24 @@ export default function LandingPageV2() {
                 color: 'linear-gradient(135deg, #1b1464 0%, #2472b3 100%)'
               }
             ].map((stat, idx) => (
-              <div key={idx} className="bg-white rounded-xl border-2 border-gray-200 p-8 hover:shadow-xl transition">
+              <div key={idx} className="bg-white rounded-xl border-2 border-gray-200 p-6 sm:p-8 hover:shadow-xl transition">
                 <div className="w-20 h-20 rounded-xl flex items-center justify-center mb-6" style={{background: stat.color}}>
                   {stat.icon}
                 </div>
-                <p className="text-4xl font-black text-gray-900 mb-2">{stat.metric}</p>
-                <p className="text-lg font-bold text-gray-700 mb-3">{stat.label}</p>
-                <p className="text-gray-600">{stat.desc}</p>
+                <p className="text-[clamp(1.6rem,4.2vw,2.25rem)] font-black text-gray-900 mb-2 break-words">{stat.metric}</p>
+                <p className="text-[clamp(1rem,2.4vw,1.125rem)] font-bold text-gray-700 mb-3 leading-snug">{stat.label}</p>
+                <p className="text-[clamp(0.95rem,2.3vw,1rem)] text-gray-600 leading-snug">{stat.desc}</p>
               </div>
             ))}
           </div>
 
           {/* Breakdown */}
-          <div className="bg-gradient-to-br from-blue-50 to-blue-100 p-10 rounded-2xl border border-blue-200">
-            <h3 className="text-3xl font-bold text-gray-900 mb-8 text-center">
+          <div className="bg-gradient-to-br from-blue-50 to-blue-100 p-6 sm:p-10 rounded-2xl border border-blue-200">
+            <h3 className="text-[clamp(1.75rem,4vw,2.25rem)] font-bold text-gray-900 mb-8 text-center">
               De Onde Vem Esse Resultado?
             </h3>
             
-            <div className="grid md:grid-cols-2 gap-6 mb-8">
+            <div className="grid md:grid-cols-2 gap-4 sm:gap-6 mb-8">
               {[
                 {
                   title: "Recuperação de Carrinhos",
@@ -217,39 +217,39 @@ export default function LandingPageV2() {
                   bg: 'bg-blue-50'
                 }
               ].map((item, idx) => (
-                <div key={idx} className="bg-white p-6 rounded-xl shadow-md border border-gray-200">
+                <div key={idx} className="bg-white p-5 sm:p-6 rounded-xl shadow-md border border-gray-200">
                   <div className="flex items-start justify-between mb-3">
-                    <h4 className="text-xl font-bold text-gray-900">{item.title}</h4>
+                    <h4 className="text-[clamp(1.05rem,2.5vw,1.25rem)] font-bold text-gray-900">{item.title}</h4>
                     <span className="px-3 py-1 rounded-full text-sm font-bold text-white" style={{background: '#2472b3'}}>
                       {item.percentage}
                     </span>
                   </div>
-                  <p className="text-3xl font-black mb-2" style={{color: '#2472b3'}}>{item.value}</p>
-                  <p className="text-gray-600">{item.desc}</p>
+                  <p className="text-[clamp(1.4rem,3.8vw,2rem)] font-black mb-2 break-words" style={{color: '#2472b3'}}>{item.value}</p>
+                  <p className="text-[clamp(0.95rem,2.3vw,1rem)] text-gray-600 leading-snug">{item.desc}</p>
                 </div>
               ))}
             </div>
 
-            <div className="text-center bg-white p-8 rounded-xl shadow-lg border-2" style={{borderColor: '#2472b3'}}>
-              <p className="text-lg text-gray-700 mb-2">Potencial total de recuperação mensal:</p>
-              <p className="text-5xl md:text-6xl font-black mb-2" style={{color: '#2472b3'}}>R$ 5.600 - R$ 22.000</p>
-              <p className="text-gray-600 text-lg">Com vendas que você JÁ CONQUISTOU mas perdeu</p>
+            <div className="text-center bg-white p-6 sm:p-8 rounded-xl shadow-lg border-2" style={{borderColor: '#2472b3'}}>
+              <p className="text-[clamp(1rem,2.4vw,1.125rem)] text-gray-700 mb-2">Potencial total de recuperação mensal:</p>
+              <p className="text-[clamp(2.25rem,6vw,3.75rem)] font-black mb-2" style={{color: '#2472b3'}}>R$ 5.600 - R$ 22.000</p>
+              <p className="text-[clamp(1rem,2.4vw,1.125rem)] text-gray-600">Com vendas que você JÁ CONQUISTOU mas perdeu</p>
             </div>
           </div>
         </div>
       </section>
 
       {/* Casos de Sucesso */}
-      <section className="py-16 px-6 bg-gray-900 text-white">
+      <section className="py-14 sm:py-16 px-5 sm:px-6 bg-gray-900 text-white">
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-3xl md:text-4xl font-bold text-center mb-4">
+          <h2 className="text-[clamp(1.75rem,4vw,2.25rem)] font-bold text-center mb-4">
             Resultados Reais. Clientes Reais.
           </h2>
-          <p className="text-center text-xl opacity-90 mb-12">
+          <p className="text-center text-[clamp(1.05rem,2.6vw,1.25rem)] opacity-90 mb-12">
             Veja o que nossos clientes estão alcançando
           </p>
 
-          <div className="space-y-8">
+          <div className="space-y-6 sm:space-y-8">
             {[
               {
                 name: "Rafael Costa",
@@ -288,16 +288,16 @@ export default function LandingPageV2() {
                 rating: 5
               }
             ].map((story, idx) => (
-              <div key={idx} className="rounded-2xl p-8 border-2" style={{background: 'linear-gradient(135deg, rgba(36, 114, 179, 0.1) 0%, rgba(27, 20, 100, 0.1) 100%)', borderColor: '#2472b3'}}>
-                <div className="grid md:grid-cols-2 gap-8">
+              <div key={idx} className="rounded-2xl p-6 sm:p-8 border-2" style={{background: 'linear-gradient(135deg, rgba(36, 114, 179, 0.1) 0%, rgba(27, 20, 100, 0.1) 100%)', borderColor: '#2472b3'}}>
+                <div className="grid md:grid-cols-2 gap-6 sm:gap-8">
                   <div>
                     <div className="flex items-center gap-4 mb-6">
-                      <div className="w-16 h-16 rounded-full flex items-center justify-center text-white text-2xl font-black" style={{background: 'linear-gradient(135deg, #2472b3 0%, #26abe2 100%)'}}>
+                      <div className="w-16 h-16 rounded-full flex items-center justify-center text-white text-[clamp(1.25rem,3vw,1.5rem)] font-black" style={{background: 'linear-gradient(135deg, #2472b3 0%, #26abe2 100%)'}}>
                         {story.image}
                       </div>
                       <div>
-                        <h3 className="text-2xl font-bold">{story.name}</h3>
-                        <p className="opacity-90">{story.business}</p>
+                        <h3 className="text-[clamp(1.25rem,3vw,1.5rem)] font-bold">{story.name}</h3>
+                        <p className="opacity-90 text-sm sm:text-base">{story.business}</p>
                         <div className="flex gap-1 mt-1">
                           {[...Array(story.rating)].map((_, i) => (
                             <Star key={i} className="w-4 h-4 fill-yellow-400 text-yellow-400" />
@@ -309,28 +309,28 @@ export default function LandingPageV2() {
                     <div className="space-y-3 mb-6">
                       <div className="flex items-start gap-3">
                         <CheckCircle2 className="w-6 h-6 flex-shrink-0 mt-1" style={{color: '#26abe2'}} />
-                        <p><span className="text-gray-400">Antes:</span> {story.before}</p>
+                        <p className="text-sm sm:text-base"><span className="text-gray-400">Antes:</span> {story.before}</p>
                       </div>
                       <div className="flex items-start gap-3">
                         <CheckCircle2 className="w-6 h-6 flex-shrink-0 mt-1" style={{color: '#26abe2'}} />
-                        <p><span className="text-gray-400">Depois:</span> {story.after}</p>
+                        <p className="text-sm sm:text-base"><span className="text-gray-400">Depois:</span> {story.after}</p>
                       </div>
                     </div>
 
                     <div className="bg-green-600 p-4 rounded-lg">
-                      <p className="text-2xl font-black mb-1">{story.increase}</p>
+                      <p className="text-[clamp(1.25rem,3vw,1.5rem)] font-black mb-1">{story.increase}</p>
                       <p className="text-sm opacity-90">{story.period}</p>
                     </div>
                   </div>
 
                   <div>
-                    <div className="bg-white bg-opacity-10 backdrop-blur p-6 rounded-xl mb-4 border border-white border-opacity-20">
+                    <div className="bg-white bg-opacity-10 backdrop-blur p-5 sm:p-6 rounded-xl mb-4 border border-white border-opacity-20">
                       <p className="font-bold mb-2" style={{color: '#26abe2'}}>✨ Destaque:</p>
-                      <p className="text-lg">{story.highlight}</p>
+                      <p className="text-[clamp(1rem,2.4vw,1.125rem)] leading-snug break-words">{story.highlight}</p>
                     </div>
                     
-                    <div className="bg-white bg-opacity-5 backdrop-blur p-6 rounded-xl italic border-l-4" style={{borderColor: '#26abe2'}}>
-                      <p className="text-lg leading-relaxed">"{story.quote}"</p>
+                    <div className="bg-white bg-opacity-5 backdrop-blur p-5 sm:p-6 rounded-xl italic border-l-4" style={{borderColor: '#26abe2'}}>
+                      <p className="text-[clamp(1rem,2.4vw,1.125rem)] leading-relaxed break-words">"{story.quote}"</p>
                     </div>
                   </div>
                 </div>
@@ -352,18 +352,18 @@ export default function LandingPageV2() {
       </section>
 
       {/* Como Funciona */}
-      <section className="py-16 px-6 bg-gray-50">
+      <section className="py-14 sm:py-16 px-5 sm:px-6 bg-gray-50">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              Como o Único Drop Gera Esses Resultados
-            </h2>
-            <p className="text-xl text-gray-600">
-              Sistema completo trabalhando 24/7 para você
-            </p>
+          <h2 className="text-[clamp(1.75rem,4vw,2.25rem)] font-bold text-gray-900 mb-4">
+            Como o Único Drop Gera Esses Resultados
+          </h2>
+          <p className="text-[clamp(1.05rem,2.6vw,1.25rem)] text-gray-600">
+            Sistema completo trabalhando 24/7 para você
+          </p>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-6 mb-12">
+          <div className="grid md:grid-cols-3 gap-5 sm:gap-6 mb-12">
             {[
               {
                 number: "1",
@@ -384,20 +384,20 @@ export default function LandingPageV2() {
                 icon: <BarChart3 className="w-8 h-8" />
               }
             ].map((step, idx) => (
-              <div key={idx} className="bg-white p-8 rounded-xl border-2 border-gray-200 hover:shadow-lg transition">
+              <div key={idx} className="bg-white p-6 sm:p-8 rounded-xl border-2 border-gray-200 hover:shadow-lg transition">
                 <div className="w-16 h-16 rounded-xl flex items-center justify-center text-white text-3xl font-black mb-6" style={{background: 'linear-gradient(135deg, #2472b3 0%, #26abe2 100%)'}}>
                   {step.number}
                 </div>
                 <div className="mb-4 text-gray-700">{step.icon}</div>
-                <h3 className="text-2xl font-bold text-gray-900 mb-3">{step.title}</h3>
-                <p className="text-gray-600 text-lg">{step.desc}</p>
+                <h3 className="text-[clamp(1.25rem,3vw,1.5rem)] font-bold text-gray-900 mb-3">{step.title}</h3>
+                <p className="text-[clamp(1rem,2.4vw,1.125rem)] text-gray-600 leading-snug">{step.desc}</p>
               </div>
             ))}
           </div>
 
-          <div className="bg-white p-10 rounded-2xl border-2" style={{borderColor: '#2472b3'}}>
-            <h3 className="text-2xl font-bold text-gray-900 mb-8 text-center">O Que Você Recebe</h3>
-            <div className="grid md:grid-cols-2 gap-6">
+          <div className="bg-white p-6 sm:p-10 rounded-2xl border-2" style={{borderColor: '#2472b3'}}>
+            <h3 className="text-[clamp(1.25rem,3vw,1.5rem)] font-bold text-gray-900 mb-8 text-center">O Que Você Recebe</h3>
+            <div className="grid md:grid-cols-2 gap-4 sm:gap-6">
               {[
                 "Recuperação automática de carrinhos abandonados",
                 "Recuperação de pedidos recusados com métodos alternativos",
@@ -414,7 +414,7 @@ export default function LandingPageV2() {
               ].map((item, idx) => (
                 <div key={idx} className="flex items-start gap-3">
                   <CheckCircle2 className="w-6 h-6 flex-shrink-0 mt-1" style={{color: '#2472b3'}} />
-                  <span className="text-gray-700 text-lg">{item}</span>
+                  <span className="text-gray-700 text-[clamp(1rem,2.4vw,1.125rem)] leading-snug">{item}</span>
                 </div>
               ))}
             </div>
