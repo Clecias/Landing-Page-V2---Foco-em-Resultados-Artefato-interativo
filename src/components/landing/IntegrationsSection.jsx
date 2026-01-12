@@ -1,40 +1,40 @@
 const integrations = [
-  { name: 'Shopify', logo: '/public/shopify.svg' },
-  { name: 'UnicoPag', logo: '/public/unicopag3.svg' },
-  { name: 'Yampi', logo: '/public/yampi.svg' },
-  { name: 'Cartpanda', logo: '/public/cartpanda.svg' },
-  { name: 'WooCommerce', logo: '/public/woocommerce.svg' },
-  { name: 'Nuvemshop', logo: '/public/nuvemshop.svg' },
-  { name: 'LPQV', logo: '/public/lpqv.svg' },
-  { name: 'Appmax', logo: '/public/appmax.svg' },
-  { name: 'Mercado Pago', logo: '/public/mercadopago.svg' },
-  { name: 'PagSeguro', logo: '/public/pagseguro.svg' },
-  { name: 'Pagar.me', logo: '/public/pagarme.svg' },
-  { name: 'Yever', logo: '/public/yever.svg' },
-  { name: 'Kiwify', logo: '/public/kiwify.svg' },
-  { name: 'Hotmart', logo: '/public/hotmart.svg' },
-  { name: 'Kirvano', logo: '/public/kirvano.svg' },
-  { name: 'Braip', logo: '/public/braip.svg' },
-  { name: 'Pepper', logo: '/public/pepper.svg' },
-  { name: 'Ticto', logo: '/public/ticto.svg' },
-  { name: 'Eduzz', logo: '/public/eduzz.svg' },
-  { name: 'Monetizze', logo: '/public/monetizze.svg' },
-  { name: 'Lastlink', logo: '/public/lastlink.svg' },
-  { name: 'Loja Integrada', logo: '/public/lojaintegrada.svg' },
-  { name: 'WhatsApp', logo: '/public/whatsapp.svg' },
-  { name: 'Facebook', logo: '/public/facebook.svg' },
-  { name: 'Google', logo: '/public/google.svg' },
-  { name: 'TikTok', logo: '/public/tiktok.svg' },
-  { name: 'Taboola', logo: '/public/taboola.svg' },
-  { name: 'Correios', logo: '/public/correios.svg' },
-  { name: 'Shopee', logo: '/public/shopee.svg' },
-  { name: 'Cainiao', logo: '/public/cainiao.svg' },
+  { name: 'Shopify', logo: '/integrations/shopify.svg' },
+  { name: 'UnicoPag', logo: '/integrations/unicopag3.svg' },
+  { name: 'Yampi', logo: '/integrations/yampi.svg' },
+  { name: 'Cartpanda', logo: '/integrations/cartpanda.svg' },
+  { name: 'WooCommerce', logo: '/integrations/woocommerce.svg' },
+  { name: 'Nuvemshop', logo: '/integrations/nuvemshop.svg' },
+  { name: 'LPQV', logo: '/integrations/lpqv.svg' },
+  { name: 'Appmax', logo: '/integrations/appmax.svg' },
+  { name: 'Mercado Pago', logo: '/integrations/mercadopago.svg' },
+  { name: 'PagSeguro', logo: '/integrations/pagseguro.svg' },
+  { name: 'Pagar.me', logo: '/integrations/pagarme.svg' },
+  { name: 'Yever', logo: '/integrations/yever.svg' },
+  { name: 'Kiwify', logo: '/integrations/kiwify.svg' },
+  { name: 'Hotmart', logo: '/integrations/hotmart.svg' },
+  { name: 'Kirvano', logo: '/integrations/kirvano.svg' },
+  { name: 'Braip', logo: '/integrations/braip.svg' },
+  { name: 'Pepper', logo: '/integrations/pepper.svg' },
+  { name: 'Ticto', logo: '/integrations/ticto.svg' },
+  { name: 'Eduzz', logo: '/integrations/eduzz.svg' },
+  { name: 'Monetizze', logo: '/integrations/monetizze.svg' },
+  { name: 'Lastlink', logo: '/integrations/lastlink.svg' },
+  { name: 'Loja Integrada', logo: '/integrations/lojaintegrada.svg' },
+  { name: 'WhatsApp', logo: '/integrations/whatsapp.svg' },
+  { name: 'Facebook', logo: '/integrations/facebook.svg' },
+  { name: 'Google', logo: '/integrations/google.svg' },
+  { name: 'TikTok', logo: '/integrations/tiktok.svg' },
+  { name: 'Taboola', logo: '/integrations/taboola.svg' },
+  { name: 'Correios', logo: '/integrations/correios.svg' },
+  { name: 'Shopee', logo: '/integrations/shopee.svg' },
+  { name: 'Cainiao', logo: '/integrations/cainiao.svg' },
 ];
 
 const featuredIntegrations = [
-  { name: 'Loggi', logo: '/public/loggi.svg' },
-  { name: 'J&T', logo: '/public/jet.svg' },
-  { name: 'Kangu', logo: '/public/kangu.svg' },
+  { name: 'Loggi', logo: '/integrations/loggi.svg' },
+  { name: 'J&T', logo: '/integrations/jet.svg' },
+  { name: 'Kangu', logo: '/integrations/kangu.svg' },
 ];
 
 export default function IntegrationsSection() {
@@ -42,10 +42,10 @@ export default function IntegrationsSection() {
     <section className="py-16 px-4 bg-[#f8f9fa]">
       <div className="container px-4 mx-auto">
         <div className="text-center mb-8 pb-2">
-          <h4 className="text-2xl md:text-3xl font-bold text-gray-900 mb-2">
+          <h4 className="text-[clamp(1.5rem,3.5vw,2rem)] font-bold text-gray-900 mb-2">
             Integrações
           </h4>
-          <p className="text-gray-600 max-w-2xl mx-auto mb-0">
+          <p className="text-[clamp(1rem,2.4vw,1.125rem)] text-gray-600 max-w-2xl mx-auto mb-0">
             Todas as integrações necessárias para crescer o seu negócio
           </p>
         </div>

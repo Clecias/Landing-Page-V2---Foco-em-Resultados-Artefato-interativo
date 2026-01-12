@@ -15,7 +15,7 @@ export default function Header() {
         </div>
 
         <Button
-          className="text-white font-semibold"
+          className="text-white font-semibold min-h-[44px] px-4 sm:px-6"
           style={{ background: 'linear-gradient(90deg, #2472b3 0%, #26abe2 100%)' }}
           href="https://www.unicodrop.com.br/app/?t=cadastrar"
         >

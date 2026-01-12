@@ -39,10 +39,10 @@ export default function VideoTestimonialsSection() {
     <section className="py-16 px-4 bg-white">
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-8">
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+          <h2 className="text-[clamp(1.75rem,4vw,2.25rem)] font-bold text-gray-900 mb-4">
             A opinião de quem usa e recomenda
           </h2>
-          <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+          <p className="text-[clamp(1rem,2.4vw,1.125rem)] text-gray-600 max-w-2xl mx-auto">
             Milhares de negócios digitais já confiam no Único Drop para
             automatizar suas vendas e economizar tempo.
           </p>

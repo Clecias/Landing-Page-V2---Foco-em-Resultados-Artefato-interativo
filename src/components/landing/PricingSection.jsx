@@ -66,10 +66,10 @@ export default function PricingSection() {
     >
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">
+          <h2 className="text-[clamp(1.75rem,4vw,2.25rem)] font-bold mb-4">
             Escolha o Plano Ideal Para Sua Loja
           </h2>
-          <p className="text-xl text-white/90">
+          <p className="text-[clamp(1.05rem,2.4vw,1.25rem)] text-white/90">
             Comece a recuperar vendas hoje mesmo
           </p>
         </div>

@@ -40,10 +40,12 @@ export default function FaqSection() {
     <section className="py-24 bg-white">
       <div className="container px-4 mx-auto max-w-3xl">
         <div className="text-center mb-12">
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+          <h2 className="text-[clamp(2rem,4.5vw,2.75rem)] font-bold text-gray-900 mb-4">
             Perguntas Frequentes
           </h2>
-          <p className="text-xl text-gray-600">Tudo o que você precisa saber</p>
+          <p className="text-[clamp(1.05rem,2.6vw,1.25rem)] text-gray-600">
+            Tudo o que você precisa saber
+          </p>
         </div>
 
         <div className="space-y-4">
