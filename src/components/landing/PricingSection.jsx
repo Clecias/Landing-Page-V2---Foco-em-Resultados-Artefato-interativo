@@ -4,6 +4,7 @@ const plans = [
   {
     name: 'Growth',
     price: '119,90',
+    href: 'https://www.unicodrop.com.br/app/?t=cadastrar',
     features: [
       'Dashboard financeiro',
       'Automação de WhatsApp ilimitada (1 número conectado)',
@@ -23,6 +24,7 @@ const plans = [
     name: 'Scale',
     price: '169,90',
     popular: true,
+    href: 'https://www.unicodrop.com.br/app/?t=cadastrar&plano=2',
     features: [
       'Tudo do plano Growth',
       'Automação de WhatsApp ilimitada (2 números conectados)',
@@ -39,6 +41,7 @@ const plans = [
   {
     name: 'Elite',
     price: '289,90',
+    href: 'https://www.unicodrop.com.br/app/?t=cadastrar&plano=3',
     features: [
       'Tudo do plano Scale',
       'Automação de WhatsApp ilimitada (4 números conectados)',
@@ -102,16 +105,17 @@ export default function PricingSection() {
                 ))}
               </ul>
 
-              <button
-                className={`w-full rounded-xl font-bold text-lg py-4 transition ${
+              <a
+                className={`w-full rounded-xl font-bold text-lg py-4 transition inline-flex items-center justify-center ${
                   plan.popular
                     ? 'bg-white text-[#2472b3] hover:shadow-2xl'
                     : 'border-2 border-white/40 text-white hover:bg-white/10'
                 }`}
+                href={plan.href}
               >
                 Começar Agora
                 <ArrowRight className="w-5 h-5 inline ml-2" />
-              </button>
+              </a>
             </div>
           ))}
         </div>

@@ -1,4 +1,4 @@
-import { Button } from '@/components/ui/button';
+import { Button } from '../ui/button';
 
 export default function Header() {
   return (
@@ -17,6 +17,7 @@ export default function Header() {
         <Button
           className="text-white font-semibold"
           style={{ background: 'linear-gradient(90deg, #2472b3 0%, #26abe2 100%)' }}
+          href="https://www.unicodrop.com.br/app/?t=cadastrar"
         >
           Testar Grátis
         </Button>

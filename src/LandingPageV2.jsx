@@ -91,10 +91,14 @@ export default function LandingPageV2() {
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
-              <button className="bg-white px-6 py-4 sm:px-8 sm:py-4 md:px-10 md:py-5 rounded-lg font-bold text-base sm:text-lg md:text-xl hover:shadow-2xl transition" style={{color: '#2472b3'}}>
+              <a
+                className="bg-white px-6 py-4 sm:px-8 sm:py-4 md:px-10 md:py-5 rounded-lg font-bold text-base sm:text-lg md:text-xl hover:shadow-2xl transition inline-flex items-center justify-center"
+                style={{color: '#2472b3'}}
+                href="https://www.unicodrop.com.br/app/?t=cadastrar"
+              >
                 Começar a Recuperar Vendas Agora
                 <ArrowRight className="w-6 h-6 inline ml-2" />
-              </button>
+              </a>
               <button
                 ref={demoTriggerRef}
                 type="button"
@@ -110,15 +114,15 @@ export default function LandingPageV2() {
             <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
               <div className="bg-white bg-opacity-20 backdrop-blur p-6 rounded-xl">
                 <p className="text-4xl font-black mb-2">R$ 2.3M+</p>
-                <p className="text-sm opacity-90">Recuperados em 2025</p>
+                <p className="text-sm opacity-90">Recuperados em 2024</p>
               </div>
               <div className="bg-white bg-opacity-20 backdrop-blur p-6 rounded-xl">
                 <p className="text-4xl font-black mb-2">38%</p>
                 <p className="text-sm opacity-90">Aumento médio</p>
               </div>
               <div className="bg-white bg-opacity-20 backdrop-blur p-6 rounded-xl">
-                <p className="text-4xl font-black mb-2">28mil+</p>
-                <p className="text-sm opacity-90">Lojas</p>
+                <p className="text-4xl font-black mb-2">500+</p>
+                <p className="text-sm opacity-90">Lojas ativas</p>
               </div>
               <div className="bg-white bg-opacity-20 backdrop-blur p-6 rounded-xl">
                 <p className="text-4xl font-black mb-2">24/7</p>
@@ -335,10 +339,14 @@ export default function LandingPageV2() {
           </div>
 
           <div className="mt-12 text-center">
-            <button className="bg-white px-6 py-4 sm:px-8 sm:py-4 md:px-10 md:py-5 rounded-lg font-bold text-base sm:text-lg md:text-xl hover:shadow-2xl transition" style={{color: '#2472b3'}}>
+            <a
+              className="bg-white px-6 py-4 sm:px-8 sm:py-4 md:px-10 md:py-5 rounded-lg font-bold text-base sm:text-lg md:text-xl hover:shadow-2xl transition inline-flex items-center justify-center"
+              style={{color: '#2472b3'}}
+              href="https://www.unicodrop.com.br/app/?t=cadastrar"
+            >
               Quero Resultados Como Esses
               <ArrowRight className="w-6 h-6 inline ml-2" />
-            </button>
+            </a>
           </div>
         </div>
       </section>
@@ -427,16 +435,23 @@ export default function LandingPageV2() {
           <p className="text-xl mb-8 opacity-90">
             Enquanto você decide, eles estão recuperando vendas no automático. Comece hoje e veja resultados em 24h.
           </p>
-          <button className="bg-white px-6 py-4 sm:px-10 sm:py-5 md:px-12 md:py-6 rounded-xl font-bold text-lg sm:text-xl md:text-2xl hover:shadow-2xl transition mb-6" style={{color: '#2472b3'}}>
+          <a
+            className="bg-white px-6 py-4 sm:px-10 sm:py-5 md:px-12 md:py-6 rounded-xl font-bold text-lg sm:text-xl md:text-2xl hover:shadow-2xl transition mb-6 inline-flex items-center justify-center"
+            style={{color: '#2472b3'}}
+            href="https://www.unicodrop.com.br/app/?t=cadastrar"
+          >
             Começar Minha Automação Agora
             <ArrowRight className="w-7 h-7 inline ml-2" />
-          </button>
+          </a>
           <div className="pt-8 border-t border-gray-700">
             <p className="text-lg mb-4">Prefere falar com alguém? Estamos aqui:</p>
-            <button className="bg-green-600 text-white px-6 py-3 sm:px-8 sm:py-4 rounded-lg font-bold text-base sm:text-lg hover:bg-green-700 transition">
+            <a
+              className="bg-green-600 text-white px-6 py-3 sm:px-8 sm:py-4 rounded-lg font-bold text-base sm:text-lg hover:bg-green-700 transition inline-flex items-center justify-center"
+              href="https://wa.me/5511945109907"
+            >
               <PhoneCall className="w-5 h-5 inline mr-2" />
               Falar no WhatsApp com Especialista
-            </button>
+            </a>
           </div>
         </div>
       </section>
