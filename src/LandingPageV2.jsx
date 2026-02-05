@@ -5,6 +5,7 @@ import VideoTestimonialsSection from './components/landing/VideoTestimonialsSect
 import IntegrationsSection from './components/landing/IntegrationsSection';
 import FaqSection from './components/landing/FaqSection';
 import Header from './components/landing/Header';
+import { initPromoPopup } from './components/landing/promoPopup';
 
 export default function LandingPageV2() {
   const [activeTab, setActiveTab] = useState('recovery');
@@ -62,6 +63,10 @@ export default function LandingPageV2() {
       demoTriggerRef.current?.focus();
     }
   }, [isDemoOpen]);
+
+  useEffect(() => {
+    initPromoPopup();
+  }, []);
 
   const handleOpenDemo = () => setIsDemoOpen(true);
   const handleCloseDemo = () => setIsDemoOpen(false);
